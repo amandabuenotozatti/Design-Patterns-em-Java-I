@@ -12,6 +12,14 @@ public abstract class Desconto {
         this.proximo = proximo;
     }
 
-    public abstract BigDecimal calcular(Orcamento orcamento);
+    public BigDecimal efetuarCalculo(Orcamento orcamento){
+        if(deveAplicar(orcamento)){
+            return calcular(orcamento);
+        }
+        return proximo.efetuarCalculo(orcamento);
+    }
+
+    protected abstract BigDecimal calcular(Orcamento orcamento);
+    public abstract boolean deveAplicar(Orcamento orcamento);
 
 }
