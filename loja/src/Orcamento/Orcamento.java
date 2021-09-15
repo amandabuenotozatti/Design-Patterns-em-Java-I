@@ -1,6 +1,5 @@
 package Orcamento;
 
-import Orcamento.Situacao.Aprovado;
 import Orcamento.Situacao.EmAnalise;
 import Orcamento.Situacao.SituacaoOrcamento;
 
